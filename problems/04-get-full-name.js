@@ -11,7 +11,28 @@ getFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
 
 function getFullName(person) {
-  // Your code here 
+
+  //create empty array
+  let ansArr = [];
+
+  //itwerate through object
+  for (let key in person) {
+
+    //store values in variable
+    let val = person[key];
+
+    //set condition to catch name
+    if(key === "firstName" || key === "lastName") {
+
+      //send variable to array
+  ansArr.push(val);
+
+    }
+
+  }
+
+  //return array changed to string
+  return ansArr.join(" ");
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
