@@ -12,8 +12,40 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
 function stringConverter(string) {
-  // Your code here 
-}
+
+  //change string into array
+  let strArr = string.split("");
+
+  //create object
+  let obj = {};
+
+  //loop through array
+  for (let i = 0; i < strArr.length; i++) {
+
+  //set variable for value at index
+  let currChar = strArr[i];
+
+  //ask if curr char is in obj
+     if(obj[currChar] !== undefined) {
+
+  //if yes increment curr char count in obj
+  obj[currChar]++;
+
+  }
+
+  //otherwise add charcter to object with count as 1
+     else {
+
+      obj[currChar] = 1;
+
+     }
+
+    }
+
+  //return object
+  return obj;
+
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = stringConverter;

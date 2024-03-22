@@ -11,8 +11,21 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  // Your code here 
-}
+
+  //create an array of keys from obj
+  let keysArr = Object.keys(obj);
+
+  //ask if array contains key
+  if(keysArr.includes(key)) {
+
+  //if yes return true
+  return true;
+
+  }
+
+//otherwise return f
+return false;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = doesKeyExist;

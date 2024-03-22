@@ -28,7 +28,35 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here 
+
+  //create an object
+  let scorePair = {};
+
+  //loop through array
+  for (let i = 0; i < people.length; i++) {
+
+  //store value at index in variable
+  let arrObj = people[i];
+
+  //ask if the value of the key is in the object
+      if(scorePair[arrObj.name] !== undefined) {
+
+  //if yes then the obj's score value is added with the current obj's score value
+      scorePair[arrObj.name] += arrObj.score;
+
+  }
+
+  //otherwise add the key score pair to the obj
+  else {
+
+    scorePair[arrObj.name] = arrObj.score;
+
+  }
+
+}
+
+  //return the object
+  return scorePair;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -12,8 +12,38 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here 
-}
+
+  //create an empty object
+  let obj = {};
+
+  //loop through array
+  for (let i = 0; i < array.length; i++) {
+
+  //store value in variable
+  let keyVal = array[i];
+
+  //ask if object contains value as key
+     if(obj[keyVal] !== undefined ) {
+
+  //if yes increment count on value as key
+        obj[keyVal]++
+
+      }
+
+     //if object is missing value as key
+     else {
+
+  //add value to object with 1 being the count
+     obj[keyVal] = 1;
+
+     }
+
+ }
+
+  //return object
+  return obj;
+
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
